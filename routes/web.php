@@ -12,6 +12,10 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
+$router->get('/',function()
+{
+    return response()->json(['message'=>'Welcome to our API']);
+});
 
 $router->group(['prefix' => 'api/v1'], function () use ($router) {
 
