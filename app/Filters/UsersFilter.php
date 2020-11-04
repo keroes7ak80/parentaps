@@ -33,6 +33,9 @@ class UsersFilter{
                 $dataCollection = $dataCollection->where('status',200); 
             elseif($parameters['statusCode']=='refunded')
                 $dataCollection = $dataCollection->where('status',300);
+
+            //if statusCode parameter is invalid
+            else $dataCollection = $dataCollection->where('status',0);
         }
 
         //if balance range parameters are passed
